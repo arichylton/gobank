@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "../components/navbar.tsx";
+import { Navbar } from "../components/navbar";
 function App() {
   return (
     <>
