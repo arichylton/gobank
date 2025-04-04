@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-*root {
+* {
   margin: 0;
   padding: 0;
+  background-color: #fefefe;
+}
+
+
+div {
+  font-size: 4rem;
 }
