@@ -1,18 +1,18 @@
 import { NavLink } from "react-router-dom";
+import "./navbar.css";
 export const Navbar = () => {
-    return (
-        <nav className="flex justify-between">
-            <div>
-            <div className="text-xl">GOBANK</div>
-            </div>
-            <ul className="flex gap-3">
-                <li className="flex-auto">
-                    <NavLink to="/">Home</NavLink>
-                </li>
-                <li className="flex-auto">
-                    <NavLink to="/about">About</NavLink>
-                </li>
-            </ul>
-        </nav>
-    );
+  return (
+    <nav className="mt-2 flex justify-between">
+      <div className="text-xl font-semibold">GOBANK </div>
+
+      <ul className="flex gap-3">
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
 };
