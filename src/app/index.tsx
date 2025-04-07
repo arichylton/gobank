@@ -2,9 +2,15 @@
 import { useEffect } from "react";
 import { Navbar } from "../components/navbar";
 import { getUsers } from "../api";
+import { UserInput } from "../types";
 function App() {
     useEffect(() => {
-        getUsers();
+        const newUser: UserInput = {
+            name: "Aric",
+            email: "Arich212@gmail.com",
+            password: "pa55word",
+        };
+        getUsers(newUser);
     }, []);
     return (
         <div className="max-w-4xl mx-auto px-4">
