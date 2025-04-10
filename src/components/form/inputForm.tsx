@@ -10,9 +10,9 @@ export const InputForm = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault(); // Prevent page reload
         const newUser: UserInput = {
-            name: "Aric",
-            email: "Arich212@gmail.com",
-            password: "pa55word",
+            name,
+            email,
+            password,
         };
         getUsers(newUser);
     };
