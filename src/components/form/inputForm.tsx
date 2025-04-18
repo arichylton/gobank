@@ -8,52 +8,73 @@ export const InputForm = () => {
     const [password, setPassword] = useState("");
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault(); // Prevent page reload
-        const newUser: UserInput = {
-            name,
-            email,
-            password,
-        };
+        e.preventDefault();
+        const newUser: UserInput = { name, email, password };
         getUsers(newUser);
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col justify-center">
-            <div>
-                <label htmlFor="name">Name:</label>
+        <form
+            onSubmit={handleSubmit}
+            className="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md space-y-4"
+        >
+            <h2 className="text-2xl font-semibold text-center text-gray-800 mb-4">
+                Create Account
+            </h2>
+
+            <div className="flex flex-col">
+                <label
+                    htmlFor="name"
+                    className="mb-1 font-medium text-gray-700"
+                >
+                    Name
+                </label>
                 <input
                     id="name"
                     type="text"
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="bg-white ms-2 mb-2 text-black"
+                    className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
             </div>
-            <div>
-                <label htmlFor="email">Email:</label>
+
+            <div className="flex flex-col">
+                <label
+                    htmlFor="email"
+                    className="mb-1 font-medium text-gray-700"
+                >
+                    Email
+                </label>
                 <input
                     id="email"
                     type="email"
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white ms-2 mb-2 text-black"
+                    className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
             </div>
-            <div>
-                <label htmlFor="password">Password:</label>
+
+            <div className="flex flex-col">
+                <label
+                    htmlFor="password"
+                    className="mb-1 font-medium text-gray-700"
+                >
+                    Password
+                </label>
                 <input
                     id="password"
                     type="password"
                     name="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="bg-white ms-2 mb-2 text-black"
+                    className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
             </div>
+
             <button
-                className="bg-black w-1/3 text-white p-2 rounded"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
                 type="submit"
             >
                 Submit
